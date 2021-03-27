@@ -1,0 +1,36 @@
+<div class="main-container">
+  <img
+    src="../../../assets/images/bg-desktop-dark.jpg"
+    class="main-bg-image"
+    alt="main image"
+  />
+  <div class="task-container">
+    <div class="todo-header">
+      <h1 class="todo-text">TODO</h1>
+      <img
+        src="../../../assets/images/icon-sun.svg"
+        class="theme-icon"
+        alt="sun icon"
+      />
+    </div>
+    <div class="task-body">
+      <app-task-create (createTask)="createTask($event)"></app-task-create>
+      <div class="task-list">
+        <ng-container *ngIf="tasks.length > 0; else emptyList">
+          <ng-container *ngFor="let task of tasks">
+            <app-task
+              *ngIf="task?.isActive === true"
+              [task]="task"
+              (remove)="updateTask($event)"
+              (update)="updateTask($event)"
+            >
+            </app-task>
+          </ng-container>
+        </ng-container>
+        <ng-template #emptyList>
+          <div class="empty-state">You don't have any tasks</div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

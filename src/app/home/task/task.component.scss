@@ -1,0 +1,18 @@
+.task-wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: #25273c;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding: 12px 20px;
+}
+.task-description {
+  width: 80%;
+  font-size: 24px;
+  color: #c7c9e0;
+  text-align: justify;
+  margin: 10px;
+}

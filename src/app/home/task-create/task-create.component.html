@@ -1,0 +1,13 @@
+<div
+  (keyup.enter)="onEnterPressed()"
+  class="task-create-wrapper"
+  [formGroup]="taskForm"
+>
+  <app-status-checkbox formControlName="status"></app-status-checkbox>
+  <input
+    type="text"
+    name="description"
+    id="description"
+    formControlName="description"
+  />
+</div>

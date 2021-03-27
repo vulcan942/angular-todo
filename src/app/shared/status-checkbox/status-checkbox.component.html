@@ -1,0 +1,14 @@
+<div (click)="toggleStatus()" class="status-checkbox-container">
+  <ng-container *ngIf="disabled === false; else disabledState">
+    <div *ngIf="value === false; else statusDone" class="status-tbd"></div>
+    <ng-template #statusDone>
+      <div class="status-done">
+        <img src="../../../assets/images/icon-check.svg" alt="icon check" />
+      </div>
+    </ng-template>
+  </ng-container>
+</div>
+
+<ng-template #disabledState>
+  <div class="disabled"></div>
+</ng-template>

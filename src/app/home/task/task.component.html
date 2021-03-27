@@ -1,0 +1,10 @@
+<div class="task-wrapper" [formGroup]="taskForm">
+  <app-status-checkbox
+    formControlName="status"
+    (change)="updateTask()"
+  ></app-status-checkbox>
+  <div class="task-description">
+    {{ task?.description }}
+  </div>
+  <img (click)="removeTask()" src="../../../assets/images/icon-cross.svg" />
+</div>
